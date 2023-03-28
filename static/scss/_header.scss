@@ -1,0 +1,52 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 1.5rem;
+  background-color: $white;
+  .left {
+  }
+  .right {
+  }
+  .user {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    img {
+      height: 2.5rem;
+      width: 2.5rem;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 0.75rem;
+    }
+    h6 {
+      font-weight: 500;
+      margin: 0;
+    }
+  }
+  .user-dropdown {
+    display: none;
+    position: absolute;
+    opacity: 0;
+    background-color: $white;
+    margin: 0;
+    min-width: 100px;
+    overflow-y: auto;
+    left: 0;
+    top: 0;
+    z-index: 9999;
+    transform-origin: 0 0;
+    outline: none;
+    padding: 0.25rem 0;
+    border-radius: 0.25rem;
+    li {
+      a {
+        display: block;
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+        &:hover {
+          background-color: $bodyBg;
+        }
+      }
+    }
+  }
+}

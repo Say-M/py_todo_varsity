@@ -1,0 +1,33 @@
+{% extends 'auth.html' %}
+<!-- divider -->
+{% block title %}Login page{% endblock %}
+<!-- divider -->
+{% block content %}
+<main class="auth-wrapper">
+  <form action="/login" method="POST">
+    {% csrf_token %}
+    <div class="input-field">
+      <input
+        id="username"
+        name="username"
+        type="text"
+        value="{{username}}"
+        class="validate"
+      />
+      <label for="username">Uesrname</label>
+    </div>
+    <div class="input-field">
+      <input id="password" name="password" type="password" class="validate" />
+      <label for="password">Password</label>
+    </div>
+    {% if messages %}
+    <ul class="messages">
+      {% for message in messages %}
+      <li class="red-text mb-4">{{ message }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+    <button class="btn deep-purple z-depth-0" type="submit">Login</button>
+  </form>
+</main>
+{% endblock %}

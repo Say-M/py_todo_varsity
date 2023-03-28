@@ -1,0 +1,54 @@
+{% extends 'main.html' %}
+<!-- divider -->
+{% block title %}Task page{% endblock %}
+<!-- divider -->
+{% block content %}
+<div class="content-wrapper">
+  <form class="task-content" method="POST" action="/task">
+    {% csrf_token %}
+    <div class="input-field">
+      <input
+        type="text"
+        name="title"
+        class="materialize-textarea"
+        placeholder="Title"
+      />
+    </div>
+    <div class="input-field">
+      <textarea
+        name="description"
+        class="materialize-textarea"
+        placeholder="What is on your mind?"
+      ></textarea>
+    </div>
+    <div class="right-align">
+      <button
+        class="btn deep-purple waves-effect waves-light z-depth-0"
+        type="submit"
+      >
+        Save
+      </button>
+    </div>
+  </form>
+  <div class="container-fluid">
+    <div class="row">
+      {% for task in tasks %}
+      <div class="col m6 l4 xl3">
+        <div class="task-card">
+          <h6>{{ task.title }}</h6>
+          <p>{{ task.description }}</p>
+          <div class="actions">
+            <a href="{% url 'updateTask' task.id %}">
+              <i class="material-icons">edit</i>
+            </a>
+            <a href="{% url 'deleteTask' task.id %}">
+              <i class="material-icons">delete</i>
+            </a>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,27 @@
+<aside class="sidebar">
+  <div class="logo">
+    <h1><span>Book</span><span>Rary</span></h1>
+  </div>
+  {% with request.resolver_match.url_name as url_name %}
+  <ul>
+    <li>
+      <a
+        href="{% url 'home' %}"
+        class="{% if url_name == 'home' %}active{% endif %}"
+      >
+        <i class="material-icons">dashboard</i>
+        <span>Dashboard</span>
+      </a>
+    </li>
+    <li>
+      <a
+        href="{% url 'task' %}"
+        class="{% if url_name == 'task' %}active{% endif %}"
+      >
+        <i class="material-icons">task</i>
+        <span>Tasks</span>
+      </a>
+    </li>
+  </ul>
+  {% endwith %}
+</aside>

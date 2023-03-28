@@ -1,0 +1,35 @@
+.task-content {
+  background-color: $white;
+  padding: 0.5rem 1.5rem 1.5rem;
+  border-radius: 0.25rem;
+  margin-bottom: 2rem;
+  textarea {
+    height: 100%;
+    min-height: 8rem;
+    max-height: 15rem;
+    overflow: auto;
+  }
+}
+.task-card {
+  padding: 1.5rem;
+  border-radius: 0.25rem;
+  background-color: $white;
+  margin-bottom: 1.5rem;
+  h6 {
+    margin-top: 0;
+    font-weight: 500;
+  }
+  p {
+    color: transparentize($color: $fontColor, $amount: 0.5);
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .actions {
+    margin-top: 1rem;
+    i {
+      color: transparentize($color: $fontColor, $amount: 0.25);
+    }
+  }
+}

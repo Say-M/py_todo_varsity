@@ -1,0 +1,46 @@
+.sidebar {
+  max-width: $sidebarWidth;
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+  background-color: $white;
+  @media screen and (max-width: 992px) {
+    display: none;
+  }
+  .logo {
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin: 0;
+      span {
+        &:last-child {
+          color: $primary;
+        }
+      }
+    }
+  }
+  ul {
+    li {
+      padding: 0 1.5rem;
+      a {
+        display: flex;
+        align-items: center;
+        padding: 0.675rem 1.25rem;
+        border-radius: 0.25rem;
+        transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
+        margin-bottom: 0.5rem;
+        i {
+          font-size: 1.25rem;
+          margin-right: 0.5rem;
+        }
+        &.active,
+        &:hover {
+          background-color: $primary;
+          color: $white;
+        }
+      }
+    }
+  }
+}

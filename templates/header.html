@@ -1,0 +1,30 @@
+<header class="header">
+  <div class="left"></div>
+  <div class="right">
+    <div class="user dropdown-trigger" data-target="user-dropdown">
+      {% load static %}
+      <img src="{% static '/assets/images/user.jpg' %}" alt="" />
+      <div>
+        <h6>{{ user.username }}</h6>
+        <small>{{ user.email }}</small>
+      </div>
+    </div>
+    <ul id="user-dropdown" class="user-dropdown z-depth-1">
+      <li><a href="#!">Profile</a></li>
+      <li><a href="#!">Settings</a></li>
+      <li><a href="{% url 'logout' %}">Logout</a></li>
+    </ul>
+  </div>
+</header>
+
+{% block script %}
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const elems = document.querySelectorAll('.dropdown-trigger')
+    const options = {
+      alignment: 'left',
+    }
+    const instances = M.Dropdown.init(elems, options)
+  })
+</script>
+{% endblock %}

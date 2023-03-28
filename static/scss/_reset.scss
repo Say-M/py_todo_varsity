@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  line-height: 1.6;
+  @media screen and (max-width: 992px) {
+    font-size: 14px;
+  }
+  @media screen and (max-width: 600px) {
+    font-size: 12px;
+  }
+}
+
+body {
+  background-color: $bodyBg;
+  font-size: 1rem;
+  color: $fontColor;
+}
+
+.app {
+  display: flex;
+  .content {
+    width: calc(100% - $sidebarWidth);
+
+    @media screen and (max-width: 992px) {
+      width: 100%;
+    }
+  }
+  .content-wrapper {
+    margin: 1.5rem;
+  }
+}
+
+a {
+  color: $primary;
+}
+
+small {
+  font-size: 85%;
+}
+
+td,
+th {
+  padding: 0.75rem;
+}
+
+/* label color */
+.input-field label {
+  color: $primary !important;
+}
+/* label focus color */
+.input-field {
+  input[type='text']:focus + label,
+  textarea:focus + label {
+    color: $primary !important;
+  }
+}
+/* label underline focus color */
+.input-field {
+  input[type='text']:focus,
+  textarea:focus {
+    border-bottom: 1px solid $primary !important;
+    box-shadow: 0 1px 0 0 $primary !important;
+  }
+}
+/* valid color */
+.input-field {
+  input[type='text'].valid,
+  textarea.valid {
+    border-bottom: 1px solid $primary !important;
+    box-shadow: 0 1px 0 0 $primary !important;
+  }
+}
+/* invalid color */
+.input-field {
+  input[type='text'].invalid,
+  textarea.invalid {
+    border-bottom: 1px solid $primary !important;
+    box-shadow: 0 1px 0 0 $primary !important;
+  }
+}
+/* icon prefix focus color */
+.input-field .prefix.active {
+  color: $primary !important;
+}

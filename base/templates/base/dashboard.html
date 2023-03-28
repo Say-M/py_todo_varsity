@@ -1,0 +1,109 @@
+{% extends 'main.html' %}
+<!-- divider -->
+{% block title %}Home page{% endblock %}
+<!-- divider -->
+{% block content %}
+<div class="content-wrapper">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col s12 m6 l4">
+        <div class="card-panel z-depth-0 white rounded-sm">
+          <div class="dashcard">
+            <span class="icon deep-purple">
+              <i class="material-icons">task_alt</i>
+            </span>
+            <div>
+              <h5>Total Tasks</h5>
+              <span>65</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m6 l4">
+        <div class="card-panel z-depth-0 white rounded-sm">
+          <div class="dashcard">
+            <span class="icon purple">
+              <i class="material-icons">menu_book</i>
+            </span>
+            <div>
+              <h5>Completed Tasks</h5>
+              <span>65</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m6 l4">
+        <div class="card-panel z-depth-0 white rounded-sm">
+          <div class="dashcard">
+            <span class="icon pink">
+              <i class="material-icons">event_busy</i>
+            </span>
+            <div>
+              <h5>Remaining Tasks</h5>
+              <span>0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="table white rounded-sm">
+    <div class="table-header">
+      <div>
+        <h5>Users</h5>
+      </div>
+      <div class="filter">
+        <div class="input-field">
+          <i class="material-icons prefix">account_circle</i>
+          <input
+            placeholder="Search..."
+            id="first_name"
+            type="text"
+            class="validate"
+          />
+        </div>
+      </div>
+    </div>
+    <table class="responsive-table">
+      <thead>
+        <tr>
+          <th scope="col">User</th>
+          <th scope="col">Status</th>
+          <th scope="col" class="right-align">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div class="table-image">
+              {% load static %}
+              <img
+                class="circle responsive-img"
+                src="{% static '/assets/images/user.jpg' %}"
+                alt=""
+              />
+              <div>
+                <h6>Mariam Ifty</h6>
+                <small>Student</small>
+              </div>
+            </div>
+          </td>
+          <td>
+            <small class="deep-purple white-text badge">Active</small>
+          </td>
+          <td class="right-align">
+            <div class="actions">
+              <span>
+                <i class="material-icons">edit</i>
+              </span>
+              <span>
+                <i class="material-icons">delete</i>
+              </span>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}

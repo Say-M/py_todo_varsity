@@ -1,0 +1,37 @@
+{% extends 'main.html' %}
+<!-- divider -->
+{% block title %}Task {{task.id}}{% endblock %}
+<!-- divider -->
+{% block content %}
+<div class="content-wrapper">
+  <form class="task-content" method="POST" action="/task/{{task.id}}">
+    {% csrf_token %}
+    <div class="input-field">
+      <input
+        type="text"
+        name="title"
+        class="materialize-textarea"
+        placeholder="Title"
+        value="{{task.title}}"
+      />
+    </div>
+    <div class="input-field">
+      <textarea
+        name="description"
+        class="materialize-textarea"
+        placeholder="What is on your mind?"
+      >
+{{task.description}}</textarea
+      >
+    </div>
+    <div class="right-align">
+      <button
+        class="btn deep-purple waves-effect waves-light z-depth-0"
+        type="submit"
+      >
+        Update
+      </button>
+    </div>
+  </form>
+</div>
+{% endblock %}

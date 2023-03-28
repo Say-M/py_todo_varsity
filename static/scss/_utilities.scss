@@ -1,0 +1,99 @@
+.rounded {
+  border-radius: 0.5rem;
+}
+
+.rounded-sm {
+  border-radius: 0.25rem;
+}
+
+.rounded-lg {
+  border-radius: 0.75rem;
+}
+
+.rounded-xl {
+  border-radius: 1rem;
+}
+
+.container-fluid {
+  margin: 0 -0.75rem;
+}
+
+@for $i from 0 through 4 {
+  .mt-#{$i} {
+    margin-top: ($i * 0.25rem);
+  }
+  .mr-#{$i} {
+    margin-right: ($i * 0.25rem);
+  }
+  .mb-#{$i} {
+    margin-bottom: ($i * 0.25rem);
+  }
+  .ml-#{$i} {
+    margin-left: ($i * 0.25rem);
+  }
+}
+
+@for $i from 0 through 4 {
+  .pt-#{$i} {
+    padding-top: ($i * 0.25rem);
+  }
+  .pr-#{$i} {
+    padding-right: ($i * 0.25rem);
+  }
+  .pb-#{$i} {
+    padding-bottom: ($i * 0.25rem);
+  }
+  .pl-#{$i} {
+    padding-left: ($i * 0.25rem);
+  }
+}
+
+.table-image {
+  display: flex;
+  align-items: center;
+  img {
+    height: 3rem;
+    width: 3rem;
+    margin-right: 0.5rem;
+    object-fit: cover;
+  }
+  h6 {
+    margin: 0 0 0.25rem;
+    font-weight: 500;
+  }
+  small {
+    color: lighten($color: $fontColor, $amount: 50);
+  }
+}
+
+.badge {
+  padding: 0.125rem 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 0.5rem;
+  span {
+    cursor: pointer;
+  }
+}
+
+.table-header {
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  h5 {
+    margin: 0;
+    font-weight: 500;
+  }
+  .filter {
+    display: flex;
+    .input-field {
+      margin: 0;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+.auth-wrapper {
+  height: 100vh;
+  margin: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  form {
+    max-width: 450px;
+    width: 100%;
+    background-color: $white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+  }
+}
